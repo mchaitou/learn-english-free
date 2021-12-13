@@ -52,7 +52,7 @@ Be sure to install the following list of requirements:
 First, `clone` or download this repository anywhere on your machine:
 
 ```
-git clone
+git clone https://github.com/mchaitou/learn-english-free.git
 ```
 
 After collecting a number of videos/audios of your interest, take one of them (you can repeat the procedure for the others) and place it inside the folder `fragments` of this repository. Then issue the following command from your miniconda prompt:
