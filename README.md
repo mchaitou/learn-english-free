@@ -7,7 +7,7 @@ In this tutorial I will show to you how to use open source softwares to learn an
 I will use the awesome software [Anki](https://ankiweb.net/about) as the basis of this methodology. Put it simple, you can transform anything to flashcards. A flashcard has two sides: front and back. In the front you place the question and in the back you place the answer. Anki will give the possibility to rank the difficulity of the question: if it is too easy, it will show it to you rarely. However, if it is hard it will show it more often. And here comes the power of this method: it will show you what you need to learn more often.
 
 Below is an example of the flashcard that we will generate:
-![alt text](./flashcard.png "Flashcard")
+![alt text](./images/flashcard.png "Flashcard")
 
 The front contains a sentence while the back contains the audio.
 By practising on a daily basis, let's say for 10 minutes per day will be able to enhance your learning x 10 when compared to the classical techniques.
