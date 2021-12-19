@@ -36,11 +36,11 @@ Be sure to install the following list of requirements:
    Install [miniconda](https://docs.conda.io/en/latest/miniconda.html)  
    After install, open Miniconda prompt and create a new environment (we will call it `learnenglishfree`):
    ```
-   conda create -n learnenglishfree
+   conda create -n learnenglishfree python=3.8.5
    ```
    Activate the environment:
    ```
-   conda activate learningenglishfree
+   conda activate learnengenglishfree
    ```
    Then install all the required requirements:
    ```
