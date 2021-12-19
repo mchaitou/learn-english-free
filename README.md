@@ -30,30 +30,36 @@ Be sure to install the following list of requirements:
 2. Then use choco to install the following softwares:  
    [ffmpeg](https://ffmpeg.org/), [git](https://git-scm.com/) and curl, by issuing the following command from your terminal (cmd or powershell for Windows):
    ```
-   choco install ffmpeg git curl -y
+   choco install ffmpeg git curl jq -y
    ```
 3. Ensure that you have a working python3:  
    Install [miniconda](https://docs.conda.io/en/latest/miniconda.html)  
    After install, open Miniconda prompt and create a new environment (we will call it `learnenglishfree`):
+
    ```
    conda create -n learnenglishfree python=3.8.5
    ```
+
    Activate the environment:
+
    ```
-   conda activate learnengenglishfree
+   conda activate learnenglishfree
    ```
+
+   `Clone` or download this repository anywhere on your machine:
+
+   ```
+   git clone https://github.com/mchaitou/learn-english-free.git
+   cd learn-english-free
+   ```
+
    Then install all the required requirements:
+
    ```
    pip install -r requirements.txt
    ```
 
 ## 3. Procedure
-
-First, `clone` or download this repository anywhere on your machine:
-
-```
-git clone https://github.com/mchaitou/learn-english-free.git
-```
 
 After collecting a number of videos/audios of your interest, take one of them (you can repeat the procedure for the others) and place it inside the folder `fragments` of this repository. Then issue the following command from your miniconda prompt:
 
@@ -65,6 +71,14 @@ autosub -i <media file> -k -S en -F json
 
 (Note that autosub has been installed when you issued `pip install -r requirements.txt` above).
 This will create a bunch of audio files that end with `.flac`. In addition, it will create a text file (aka json file) that ends with `.json`.
+
+Then create the file `transcript.txt` (Windows, for Linux replace `type` with `cat`):
+
+```
+type fragments/<media file>.en.json | jq .[].content > transcript.txt
+
+```
+
 Your next step is to launch this command:
 
 ```
