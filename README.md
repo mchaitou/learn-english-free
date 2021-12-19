@@ -32,7 +32,8 @@ Be sure to install the following list of requirements:
    ```
    choco install ffmpeg git curl jq -y
    ```
-3. Ensure that you have a working python3:  
+3. Install [youtube-dl](https://github.com/ytdl-org/youtube-dl)
+4. Ensure that you have a working python3:  
    Install [miniconda](https://docs.conda.io/en/latest/miniconda.html)  
    After install, open Miniconda prompt and create a new environment (we will call it `learnenglishfree`):
 
@@ -66,6 +67,7 @@ After collecting a number of videos/audios of your interest, take one of them (y
 ```
 cd fragments
 autosub -i <media file> -k -S en -F json
+cd ..
 
 ```
 
@@ -82,7 +84,6 @@ type fragments/<media file>.en.json | jq .[].content > transcript.txt
 Your next step is to launch this command:
 
 ```
-cd ..
 python split_transcript.py
 ```
 
