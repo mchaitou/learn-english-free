@@ -66,6 +66,9 @@ After collecting a number of videos/audios of your interest, take one of them (y
 
 ```
 cd fragments
+# Download a youtube video
+youtube-dl <youtube URL>
+# <media file> is the name of the dowloaded youtuve video
 autosub -i <media file> -k -S en -F json
 cd ..
 
@@ -77,7 +80,7 @@ This will create a bunch of audio files that end with `.flac`. In addition, it w
 Then create the file `transcript.txt` (Windows, for Linux replace `type` with `cat`):
 
 ```
-type fragments/<media file>.en.json | jq .[].content > transcript.txt
+type fragments\<media file>.en.json | jq .[].content > transcript.txt
 
 ```
 
